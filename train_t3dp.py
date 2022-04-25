@@ -227,7 +227,7 @@ if __name__ == '__main__':
     opt.seed = seed
     wandb.init(project="HMAR_tracking", tags=opt.tags, settings=wandb.Settings(start_method="fork"))
     wandb.config.update(opt)
-    try: os.system("mkdir save")
+    try: os.mkdir("save")
     except: pass
     
     opt.wandb_name     = wandb.run.name
